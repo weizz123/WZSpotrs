@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04D9347ABF008DF6538C28CA /* libPods-DrakHorseWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A39D9D73EEF9800F9C4132 /* libPods-DrakHorseWork.a */; };
+		3496C9D61EAA292100F372BD /* JKSportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496C9D41EAA292100F372BD /* JKSportViewController.m */; };
+		3496C9D71EAA292100F372BD /* JKSportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3496C9D51EAA292100F372BD /* JKSportViewController.xib */; };
+		3496C9DA1EAA302500F372BD /* JKSportPoleLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496C9D91EAA302500F372BD /* JKSportPoleLine.m */; };
+		3496C9DD1EAA324200F372BD /* JKSportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496C9DC1EAA324200F372BD /* JKSportModel.m */; };
+		34C148D61EAA184F00000BD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C148D51EAA184F00000BD6 /* main.m */; };
+		34C148D91EAA184F00000BD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C148D81EAA184F00000BD6 /* AppDelegate.m */; };
+		34C148DF1EAA184F00000BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C148DD1EAA184F00000BD6 /* Main.storyboard */; };
+		34C148E11EAA184F00000BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C148E01EAA184F00000BD6 /* Assets.xcassets */; };
+		34C148E41EAA184F00000BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C148E21EAA184F00000BD6 /* LaunchScreen.storyboard */; };
+		34C148F31EAA1C0700000BD6 /* JKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C148F21EAA1C0700000BD6 /* JKHomeViewController.m */; };
+		34C148F81EAA1CF500000BD6 /* JKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C148F71EAA1CF500000BD6 /* JKMapViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28A39D9D73EEF9800F9C4132 /* libPods-DrakHorseWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrakHorseWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3496C9D31EAA292100F372BD /* JKSportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportViewController.h; sourceTree = "<group>"; };
+		3496C9D41EAA292100F372BD /* JKSportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportViewController.m; sourceTree = "<group>"; };
+		3496C9D51EAA292100F372BD /* JKSportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSportViewController.xib; sourceTree = "<group>"; };
+		3496C9D81EAA302500F372BD /* JKSportPoleLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportPoleLine.h; sourceTree = "<group>"; };
+		3496C9D91EAA302500F372BD /* JKSportPoleLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportPoleLine.m; sourceTree = "<group>"; };
+		3496C9DB1EAA324200F372BD /* JKSportModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportModel.h; sourceTree = "<group>"; };
+		3496C9DC1EAA324200F372BD /* JKSportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportModel.m; sourceTree = "<group>"; };
+		34C148D11EAA184F00000BD6 /* DrakHorseWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrakHorseWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C148D51EAA184F00000BD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		34C148D71EAA184F00000BD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		34C148D81EAA184F00000BD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		34C148DE1EAA184F00000BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34C148E01EAA184F00000BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34C148E31EAA184F00000BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34C148E51EAA184F00000BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C148F11EAA1C0700000BD6 /* JKHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JKHomeViewController.h; path = ../Controllers/JKHomeViewController.h; sourceTree = "<group>"; };
+		34C148F21EAA1C0700000BD6 /* JKHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JKHomeViewController.m; path = ../Controllers/JKHomeViewController.m; sourceTree = "<group>"; };
+		34C148F61EAA1CF500000BD6 /* JKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMapViewController.h; sourceTree = "<group>"; };
+		34C148F71EAA1CF500000BD6 /* JKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMapViewController.m; sourceTree = "<group>"; };
+		3854F48AE170EB5C1D7377F0 /* Pods-DrakHorseWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrakHorseWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrakHorseWork/Pods-DrakHorseWork.release.xcconfig"; sourceTree = "<group>"; };
+		78E86C7CC32BFF0175B7FA21 /* Pods-DrakHorseWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrakHorseWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrakHorseWork/Pods-DrakHorseWork.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34C148CE1EAA184F00000BD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D9347ABF008DF6538C28CA /* libPods-DrakHorseWork.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DDCE8B3877DAF8447E69D7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28A39D9D73EEF9800F9C4132 /* libPods-DrakHorseWork.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3496C9D21EAA290200F372BD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				34C148F11EAA1C0700000BD6 /* JKHomeViewController.h */,
+				34C148F21EAA1C0700000BD6 /* JKHomeViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		34C148C81EAA184F00000BD6 = {
+			isa = PBXGroup;
+			children = (
+				34C148D31EAA184F00000BD6 /* DrakHorseWork */,
+				34C148D41EAA184F00000BD6 /* Supporting Files */,
+				34C148D21EAA184F00000BD6 /* Products */,
+				F967A0D4CAF742740FA79035 /* Pods */,
+				2DDCE8B3877DAF8447E69D7E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		34C148D21EAA184F00000BD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34C148D11EAA184F00000BD6 /* DrakHorseWork.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34C148D31EAA184F00000BD6 /* DrakHorseWork */ = {
+			isa = PBXGroup;
+			children = (
+				34C148EB1EAA1BC200000BD6 /* Classes */,
+			);
+			path = DrakHorseWork;
+			sourceTree = "<group>";
+		};
+		34C148D41EAA184F00000BD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34C148D71EAA184F00000BD6 /* AppDelegate.h */,
+				34C148D81EAA184F00000BD6 /* AppDelegate.m */,
+				34C148DD1EAA184F00000BD6 /* Main.storyboard */,
+				34C148E01EAA184F00000BD6 /* Assets.xcassets */,
+				34C148E21EAA184F00000BD6 /* LaunchScreen.storyboard */,
+				34C148E51EAA184F00000BD6 /* Info.plist */,
+				34C148D51EAA184F00000BD6 /* main.m */,
+			);
+			name = "Supporting Files";
+			path = DrakHorseWork;
+			sourceTree = "<group>";
+		};
+		34C148EB1EAA1BC200000BD6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				34C148EC1EAA1BC200000BD6 /* Category */,
+				34C148ED1EAA1BC200000BD6 /* Controllers */,
+				34C148EE1EAA1BC200000BD6 /* Models */,
+				3496C9D21EAA290200F372BD /* Main */,
+				34C148EF1EAA1BC200000BD6 /* Tools */,
+				34C148F01EAA1BC200000BD6 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		34C148EC1EAA1BC200000BD6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		34C148ED1EAA1BC200000BD6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3496C9D31EAA292100F372BD /* JKSportViewController.h */,
+				3496C9D41EAA292100F372BD /* JKSportViewController.m */,
+				3496C9D51EAA292100F372BD /* JKSportViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		34C148EE1EAA1BC200000BD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3496C9D81EAA302500F372BD /* JKSportPoleLine.h */,
+				3496C9D91EAA302500F372BD /* JKSportPoleLine.m */,
+				3496C9DB1EAA324200F372BD /* JKSportModel.h */,
+				3496C9DC1EAA324200F372BD /* JKSportModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		34C148EF1EAA1BC200000BD6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		34C148F01EAA1BC200000BD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34C148F61EAA1CF500000BD6 /* JKMapViewController.h */,
+				34C148F71EAA1CF500000BD6 /* JKMapViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F967A0D4CAF742740FA79035 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78E86C7CC32BFF0175B7FA21 /* Pods-DrakHorseWork.debug.xcconfig */,
+				3854F48AE170EB5C1D7377F0 /* Pods-DrakHorseWork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34C148D01EAA184F00000BD6 /* DrakHorseWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C148E81EAA184F00000BD6 /* Build configuration list for PBXNativeTarget "DrakHorseWork" */;
+			buildPhases = (
+				F9D74075C5C0E9DE561CBC1A /* [CP] Check Pods Manifest.lock */,
+				34C148CD1EAA184F00000BD6 /* Sources */,
+				34C148CE1EAA184F00000BD6 /* Frameworks */,
+				34C148CF1EAA184F00000BD6 /* Resources */,
+				A5EEB689AC6AB5FB395D11D5 /* [CP] Embed Pods Frameworks */,
+				86109F357FF9FAECC3D9BA27 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrakHorseWork;
+			productName = DrakHorseWork;
+			productReference = 34C148D11EAA184F00000BD6 /* DrakHorseWork.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34C148C91EAA184F00000BD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JK;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Jokin;
+				TargetAttributes = {
+					34C148D01EAA184F00000BD6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 34C148CC1EAA184F00000BD6 /* Build configuration list for PBXProject "DrakHorseWork" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34C148C81EAA184F00000BD6;
+			productRefGroup = 34C148D21EAA184F00000BD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34C148D01EAA184F00000BD6 /* DrakHorseWork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34C148CF1EAA184F00000BD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C148E41EAA184F00000BD6 /* LaunchScreen.storyboard in Resources */,
+				34C148E11EAA184F00000BD6 /* Assets.xcassets in Resources */,
+				3496C9D71EAA292100F372BD /* JKSportViewController.xib in Resources */,
+				34C148DF1EAA184F00000BD6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86109F357FF9FAECC3D9BA27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrakHorseWork/Pods-DrakHorseWork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5EEB689AC6AB5FB395D11D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrakHorseWork/Pods-DrakHorseWork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9D74075C5C0E9DE561CBC1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34C148CD1EAA184F00000BD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C148F31EAA1C0700000BD6 /* JKHomeViewController.m in Sources */,
+				3496C9D61EAA292100F372BD /* JKSportViewController.m in Sources */,
+				34C148D91EAA184F00000BD6 /* AppDelegate.m in Sources */,
+				34C148F81EAA1CF500000BD6 /* JKMapViewController.m in Sources */,
+				34C148D61EAA184F00000BD6 /* main.m in Sources */,
+				3496C9DD1EAA324200F372BD /* JKSportModel.m in Sources */,
+				3496C9DA1EAA302500F372BD /* JKSportPoleLine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		34C148DD1EAA184F00000BD6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C148DE1EAA184F00000BD6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		34C148E21EAA184F00000BD6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C148E31EAA184F00000BD6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34C148E61EAA184F00000BD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		34C148E71EAA184F00000BD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34C148E91EAA184F00000BD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78E86C7CC32BFF0175B7FA21 /* Pods-DrakHorseWork.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrakHorseWork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jokin.DrakHorseWork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		34C148EA1EAA184F00000BD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3854F48AE170EB5C1D7377F0 /* Pods-DrakHorseWork.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrakHorseWork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jokin.DrakHorseWork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34C148CC1EAA184F00000BD6 /* Build configuration list for PBXProject "DrakHorseWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C148E61EAA184F00000BD6 /* Debug */,
+				34C148E71EAA184F00000BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C148E81EAA184F00000BD6 /* Build configuration list for PBXNativeTarget "DrakHorseWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C148E91EAA184F00000BD6 /* Debug */,
+				34C148EA1EAA184F00000BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34C148C91EAA184F00000BD6 /* Project object */;
+}
