@@ -15,7 +15,7 @@
 
 @property (nonatomic,strong)JKSportModel *track;
 
-
+@property (nonatomic,assign)CGPoint btnCenter;
     
 
     

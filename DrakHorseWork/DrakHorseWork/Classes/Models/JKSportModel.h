@@ -16,6 +16,11 @@ typedef enum : NSUInteger {
     HMSportTypeWalking, //步行
 } HMSportType;  //运动类型
 
+typedef enum : NSUInteger {
+    HMSportStateContinue, //继续
+    HMSportStatePause,  //暂停
+    HMSportStateFinish,  //结束
+} JKSportState;
 @interface JKSportModel : NSObject
 
 // 起点大头针模型
@@ -25,11 +30,22 @@ typedef enum : NSUInteger {
 // 运动类型图片名称
 @property (nonatomic,copy) NSString *sportImageName;
 
+//运动状态
+@property (nonatomic, assign) JKSportState sportState;
+//总距离  km
+@property (nonatomic, assign, readonly) CGFloat totalDistance;
+//总时长  s
+@property (nonatomic, assign, readonly) CGFloat totalTime;
 
-- (instancetype)initWithSpotrType:(HMSportType)type;
+//最大速度  km/hour
+@property (nonatomic, assign, readonly) CGFloat maxSpeed;
+//平均速度  km/hour
+@property (nonatomic, assign, readonly) CGFloat avgSpeed;
+
+- (instancetype)initWithSportType:(HMSportType)sportType withSportState:(JKSportState)state;
 
 
-- (MAPolyline *)appendPolyLineWithDest:(CLLocation *)dest;
+- (JKSportPoleLine *)appendPolylineWithDest:(CLLocation *)dest;
 
 
 

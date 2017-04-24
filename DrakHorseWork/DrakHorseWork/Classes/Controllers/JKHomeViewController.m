@@ -31,7 +31,7 @@
 - (IBAction)runBtn:(UIButton *)sender {
     
     JKSportViewController *sportVc = [[JKSportViewController alloc] init];
-    JKSportModel *model = [[JKSportModel alloc] initWithSpotrType:sender.tag];
+    JKSportModel *model = [[JKSportModel alloc] initWithSportType:sender.tag withSportState:HMSportStateContinue];
     sportVc.model = model;
     [self presentViewController:sportVc animated:YES completion:nil];
     

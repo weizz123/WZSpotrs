@@ -41,6 +41,11 @@
     
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.mapView.compassOrigin =  CGPointMake(_btnCenter.x - _mapView.compassSize.width * 0.5, _btnCenter.y - _mapView.compassSize.height * 0.5);
+    
+}
 
 - (void)mapView:(MAMapView *)mapView didSingleTappedAtCoordinate:(CLLocationCoordinate2D)coordinate {
     //构造折线数据对象
@@ -74,14 +79,16 @@
     
     if (_hasSetStarAnnor == NO && self.track.startAnno) {
         [_mapView addAnnotation:self.track.startAnno];
-        _hasSetStarAnnor = NO;
+        _hasSetStarAnnor = YES;
     }
     
     
-    MAPolyline *newPolyline = [self.track appendPolyLineWithDest:userLocation.location];
+    JKSportPoleLine *newPolyline = [self.track appendPolylineWithDest:userLocation.location];
+    
     [_mapView addOverlay:newPolyline];
     
     
+    NSLog(@"总距离:%f, 总时长:%f, 最大速度:%f, 平均速度:%f", self.track.totalDistance, self.track.totalTime, self.track.maxSpeed, self.track.avgSpeed);
     
 }
 
@@ -113,7 +120,8 @@
         polylineRenderer.lineWidth    = 4.f;
         JKSportPoleLine *polyline = overlay;
         polylineRenderer.strokeColor  = polyline.storkeColor;
-        NSLog(@"%@",polyline.storkeColor);
+//        NSLog(@"%@",polyline.storkeColor);
+        
         polylineRenderer.lineJoinType = kMALineJoinRound;
         polylineRenderer.lineCapType  = kMALineCapRound;
         

@@ -7,12 +7,13 @@
 //
 
 #import "JKSportViewController.h"
-#import "JKMapViewController.h"
-
+#import "JKSportTrackViewController.h"
 
 @interface JKSportViewController ()
 @property (strong, nonatomic) IBOutlet UIView *trackView;
 @property (strong, nonatomic) IBOutlet UIView *controlView;
+@property (nonatomic,strong)JKSportTrackViewController *trackVc;
+@property (strong, nonatomic) IBOutlet UIButton *locationBtn;
 
 @end
 
@@ -20,20 +21,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.trackVc = [[JKSportTrackViewController alloc] init];
+    self.trackVc.model = self.model;
     
-    [self creatTrackView];
 }
 
-- (void)creatTrackView {
-    JKMapViewController *mapView = [[JKMapViewController alloc] init];
-    [self addChildViewController:mapView];
-    mapView.view.frame = self.trackView.bounds;
-    [self.trackView addSubview:mapView.view];
-    mapView.track = self.model;
-    [mapView didMoveToParentViewController:self];
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.trackVc.center = self.locationBtn.center;
     
+}
+
+- (IBAction)touchLocationBtn:(UIButton *)sender {
     
+    [self presentViewController:self.trackVc animated:YES completion:nil];
+}
+
+- (IBAction)stateBtn:(UIButton *)sender {
     
+    self.model.spotrType = sender.tag;
     
 }
 

@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JKSportViewController">
             <connections>
                 <outlet property="controlView" destination="uFH-JB-LoR" id="oSe-7w-kPF"/>
+                <outlet property="locationBtn" destination="hdf-5O-VQm" id="5QO-41-kG4"/>
                 <outlet property="trackView" destination="EG8-aQ-fgi" id="qDR-oZ-hg9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,11 +25,59 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EG8-aQ-fgi">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdf-5O-VQm">
+                            <rect key="frame" x="319" y="28" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="O6o-Qr-OR2"/>
+                                <constraint firstAttribute="width" constant="40" id="mxk-kB-wLM"/>
+                            </constraints>
+                            <state key="normal" image="ic_sport_map"/>
+                            <connections>
+                                <action selector="touchLocationBtn:" destination="-1" eventType="touchUpInside" id="kRB-O0-JpV"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hdf-5O-VQm" firstAttribute="top" secondItem="EG8-aQ-fgi" secondAttribute="top" constant="28" id="Nrz-xY-43r"/>
+                        <constraint firstAttribute="trailing" secondItem="hdf-5O-VQm" secondAttribute="trailing" constant="16" id="kmE-f5-wqt"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFH-JB-LoR">
                     <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipb-EY-wuR">
+                            <rect key="frame" x="78.5" y="85" width="31" height="30"/>
+                            <state key="normal" title="继续"/>
+                            <connections>
+                                <action selector="stateBtn:" destination="-1" eventType="touchUpInside" id="Ceb-eD-Mhx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CF7-xa-8m3">
+                            <rect key="frame" x="172" y="85" width="31" height="30"/>
+                            <state key="normal" title="暂停"/>
+                            <connections>
+                                <action selector="stateBtn:" destination="-1" eventType="touchUpInside" id="ntm-xu-TKL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZC-ck-Tqu">
+                            <rect key="frame" x="266" y="85" width="31" height="30"/>
+                            <state key="normal" title="结束"/>
+                            <connections>
+                                <action selector="stateBtn:" destination="-1" eventType="touchUpInside" id="KBN-UV-i1W"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="CF7-xa-8m3" firstAttribute="centerX" secondItem="uFH-JB-LoR" secondAttribute="centerX" id="0WA-8y-Dq6"/>
+                        <constraint firstItem="MZC-ck-Tqu" firstAttribute="centerY" secondItem="uFH-JB-LoR" secondAttribute="centerY" id="1m0-3a-L8q"/>
+                        <constraint firstItem="MZC-ck-Tqu" firstAttribute="centerX" secondItem="uFH-JB-LoR" secondAttribute="centerX" multiplier="1.5" id="E98-GY-cp4"/>
+                        <constraint firstItem="Ipb-EY-wuR" firstAttribute="centerX" secondItem="uFH-JB-LoR" secondAttribute="centerX" multiplier="0.5" id="HrY-mg-D0f"/>
+                        <constraint firstItem="Ipb-EY-wuR" firstAttribute="centerY" secondItem="uFH-JB-LoR" secondAttribute="centerY" id="K7k-dM-VYx"/>
+                        <constraint firstItem="CF7-xa-8m3" firstAttribute="centerY" secondItem="uFH-JB-LoR" secondAttribute="centerY" id="paT-yi-Rzd"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,6 +91,10 @@
                 <constraint firstAttribute="trailing" secondItem="EG8-aQ-fgi" secondAttribute="trailing" id="k7T-PJ-XiJ"/>
                 <constraint firstItem="EG8-aQ-fgi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qR0-55-LhU"/>
             </constraints>
+            <point key="canvasLocation" x="113" y="40"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_sport_map" width="30" height="30"/>
+    </resources>
 </document>

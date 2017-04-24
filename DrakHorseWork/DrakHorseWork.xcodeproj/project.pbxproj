@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04D9347ABF008DF6538C28CA /* libPods-DrakHorseWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A39D9D73EEF9800F9C4132 /* libPods-DrakHorseWork.a */; };
+		340FDDB51EACC127000803CC /* JKSportTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340FDDB31EACC127000803CC /* JKSportTrackViewController.m */; };
+		340FDDB61EACC127000803CC /* JKSportTrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340FDDB41EACC127000803CC /* JKSportTrackViewController.xib */; };
+		340FDDB91EACC605000803CC /* JKAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 340FDDB81EACC605000803CC /* JKAnimation.m */; };
 		3496C9D61EAA292100F372BD /* JKSportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496C9D41EAA292100F372BD /* JKSportViewController.m */; };
 		3496C9D71EAA292100F372BD /* JKSportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3496C9D51EAA292100F372BD /* JKSportViewController.xib */; };
 		3496C9DA1EAA302500F372BD /* JKSportPoleLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496C9D91EAA302500F372BD /* JKSportPoleLine.m */; };
@@ -23,6 +26,11 @@
 
 /* Begin PBXFileReference section */
 		28A39D9D73EEF9800F9C4132 /* libPods-DrakHorseWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrakHorseWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		340FDDB21EACC127000803CC /* JKSportTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportTrackViewController.h; sourceTree = "<group>"; };
+		340FDDB31EACC127000803CC /* JKSportTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportTrackViewController.m; sourceTree = "<group>"; };
+		340FDDB41EACC127000803CC /* JKSportTrackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSportTrackViewController.xib; sourceTree = "<group>"; };
+		340FDDB71EACC605000803CC /* JKAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKAnimation.h; sourceTree = "<group>"; };
+		340FDDB81EACC605000803CC /* JKAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKAnimation.m; sourceTree = "<group>"; };
 		3496C9D31EAA292100F372BD /* JKSportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportViewController.h; sourceTree = "<group>"; };
 		3496C9D41EAA292100F372BD /* JKSportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportViewController.m; sourceTree = "<group>"; };
 		3496C9D51EAA292100F372BD /* JKSportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSportViewController.xib; sourceTree = "<group>"; };
@@ -64,6 +72,16 @@
 				28A39D9D73EEF9800F9C4132 /* libPods-DrakHorseWork.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		340FDDB11EACC10E000803CC /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				340FDDB21EACC127000803CC /* JKSportTrackViewController.h */,
+				340FDDB31EACC127000803CC /* JKSportTrackViewController.m */,
+				340FDDB41EACC127000803CC /* JKSportTrackViewController.xib */,
+			);
+			path = Track;
 			sourceTree = "<group>";
 		};
 		3496C9D21EAA290200F372BD /* Main */ = {
@@ -143,6 +161,7 @@
 				3496C9D31EAA292100F372BD /* JKSportViewController.h */,
 				3496C9D41EAA292100F372BD /* JKSportViewController.m */,
 				3496C9D51EAA292100F372BD /* JKSportViewController.xib */,
+				340FDDB11EACC10E000803CC /* Track */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +180,8 @@
 		34C148EF1EAA1BC200000BD6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				340FDDB71EACC605000803CC /* JKAnimation.h */,
+				340FDDB81EACC605000803CC /* JKAnimation.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -252,6 +273,7 @@
 			files = (
 				34C148E41EAA184F00000BD6 /* LaunchScreen.storyboard in Resources */,
 				34C148E11EAA184F00000BD6 /* Assets.xcassets in Resources */,
+				340FDDB61EACC127000803CC /* JKSportTrackViewController.xib in Resources */,
 				3496C9D71EAA292100F372BD /* JKSportViewController.xib in Resources */,
 				34C148DF1EAA184F00000BD6 /* Main.storyboard in Resources */,
 			);
@@ -312,8 +334,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				340FDDB51EACC127000803CC /* JKSportTrackViewController.m in Sources */,
 				34C148F31EAA1C0700000BD6 /* JKHomeViewController.m in Sources */,
 				3496C9D61EAA292100F372BD /* JKSportViewController.m in Sources */,
+				340FDDB91EACC605000803CC /* JKAnimation.m in Sources */,
 				34C148D91EAA184F00000BD6 /* AppDelegate.m in Sources */,
 				34C148F81EAA1CF500000BD6 /* JKMapViewController.m in Sources */,
 				34C148D61EAA184F00000BD6 /* main.m in Sources */,

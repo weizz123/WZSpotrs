@@ -9,7 +9,8 @@
 #import "JKSportPoleLine.h"
 
 @implementation JKSportPoleLine
-
+@synthesize time = _time;
+@synthesize distance = _distance;
 + (instancetype)polylineWithSourceLocation:(CLLocation *)source andDestLocation:(CLLocation *)dest {
     
     //构造折线数据对象
@@ -33,10 +34,22 @@
     _speed = (soure.speed + dest.speed) * 0.5 * 3.6;
     _storkeColor = [UIColor colorWithRed:(_speed * 0.033) green:1 blue:0 alpha:1];
     
-    
+    _storkeColor = [UIColor colorWithRed:(_speed * 0.033) green:1 blue:0 alpha:1];
+    //计算时间差
+    _time = [dest.timestamp timeIntervalSinceDate:soure.timestamp];
+    //计算距离
+    _distance = [dest distanceFromLocation:soure] * 0.001;
 }
 
+- (CGFloat)distance{
+    
+    return _distance;
+}
 
+- (CGFloat)time{
+    
+    return _time;
+}
 
 
 

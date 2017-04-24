@@ -14,6 +14,11 @@
 
 @property (nonatomic,strong)UIColor *storkeColor;
 
+//折线距离   km
+@property (nonatomic, assign, readonly) CGFloat distance;
+
+//折线时长   s
+@property (nonatomic, assign, readonly) CGFloat time;
 
 
 
