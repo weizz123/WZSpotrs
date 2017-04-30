@@ -10,4 +10,11 @@
 
 @interface JKSportCPSButton : UIButton
 
+@property (nonatomic, assign) IBInspectable BOOL isTrackBtn;
+
+
+
+
+
+
 @end

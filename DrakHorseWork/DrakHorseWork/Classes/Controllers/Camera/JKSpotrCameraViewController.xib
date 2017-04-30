@@ -1,20 +1,162 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="DINCond-Bold.otf">
+            <string>DINCond-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JKSpotrCameraViewController">
             <connections>
+                <outlet property="cameraBtn" destination="M0A-na-1Vo" id="pWZ-J7-pr2"/>
+                <outlet property="cameraView" destination="dzf-4y-A1a" id="AMI-fg-DM2"/>
+                <outlet property="distanceLabel" destination="313-4J-pN8" id="bUq-HQ-YsZ"/>
+                <outlet property="imageSeaveLabel" destination="0jb-i8-W4m" id="Wo5-pS-TQ3"/>
+                <outlet property="revolveBtn" destination="Heo-v0-5zh" id="9OI-wB-Zkf"/>
+                <outlet property="shareBtn" destination="xe2-D3-Fq6" id="gN2-WQ-GUM"/>
+                <outlet property="sportImgV" destination="Igu-hm-ZDU" id="1PS-66-fbC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="cameraConstraints" destination="jvB-qr-fS5" id="3wc-n0-okX"/>
+                <outletCollection property="cameraConstraints" destination="hZP-fe-C2e" id="Xn8-rb-gHj"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0A-na-1Vo">
+                    <rect key="frame" x="154.5" y="569" width="66" height="66"/>
+                    <state key="normal" backgroundImage="ic_waterprint_shutter"/>
+                    <connections>
+                        <action selector="cameraBtnAction:" destination="-1" eventType="touchUpInside" id="JjR-S9-L5a"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAY-bM-8sQ">
+                    <rect key="frame" x="20" y="586" width="32" height="32"/>
+                    <state key="normal" backgroundImage="ic_waterprint_close"/>
+                    <connections>
+                        <action selector="closeBtnAction:" destination="-1" eventType="touchUpInside" id="LCy-gj-nIy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Heo-v0-5zh">
+                    <rect key="frame" x="323" y="586" width="32" height="32"/>
+                    <state key="normal" image="ic_waterprint_revolve"/>
+                    <connections>
+                        <action selector="changeCameraBtnAction:" destination="-1" eventType="touchUpInside" id="RTx-jG-EZ4"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe2-D3-Fq6">
+                    <rect key="frame" x="323" y="586" width="32" height="32"/>
+                    <state key="normal" image="ic_waterprint_share"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzf-4y-A1a">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_waterprint_action_oriented" translatesAutoresizingMaskIntoConstraints="NO" id="Igu-hm-ZDU">
+                            <rect key="frame" x="82.5" y="420" width="211" height="43"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="313-4J-pN8">
+                            <rect key="frame" x="154.5" y="478" width="66.5" height="29"/>
+                            <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图片保存成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jb-i8-W4m">
+                            <rect key="frame" x="144" y="50" width="86" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oc3-Ut-ucQ" userLabel="leftView" customClass="JKSportMaskView">
+                            <rect key="frame" x="-239.5" y="0.0" width="187.5" height="537"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_shutter_center_left" translatesAutoresizingMaskIntoConstraints="NO" id="6wE-L1-A9P">
+                                    <rect key="frame" x="135.5" y="216.5" width="104" height="104"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="6wE-L1-A9P" firstAttribute="centerX" secondItem="oc3-Ut-ucQ" secondAttribute="trailing" id="hyv-Us-WJc"/>
+                                <constraint firstItem="6wE-L1-A9P" firstAttribute="centerY" secondItem="oc3-Ut-ucQ" secondAttribute="centerY" id="xDk-aD-KWm"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="shutterView" destination="6wE-L1-A9P" id="77q-eW-hUK"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8Y-Hc-QAX" userLabel="rightView" customClass="JKSportMaskView">
+                            <rect key="frame" x="427" y="0.0" width="187.5" height="537"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_shutter_center_right" translatesAutoresizingMaskIntoConstraints="NO" id="jTE-Eo-jjb">
+                                    <rect key="frame" x="-52" y="216" width="104" height="104"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="jTE-Eo-jjb" firstAttribute="centerX" secondItem="C8Y-Hc-QAX" secondAttribute="leading" id="kad-Fl-ogu"/>
+                                <constraint firstItem="jTE-Eo-jjb" firstAttribute="centerY" secondItem="C8Y-Hc-QAX" secondAttribute="centerY" id="m9W-5D-XgI"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="shutterView" destination="jTE-Eo-jjb" id="SkS-tz-8qE"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.51764705882352935" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="0jb-i8-W4m" firstAttribute="centerX" secondItem="dzf-4y-A1a" secondAttribute="centerX" id="0uR-U3-Q4h"/>
+                        <constraint firstItem="oc3-Ut-ucQ" firstAttribute="width" secondItem="dzf-4y-A1a" secondAttribute="width" multiplier="0.5" id="2Us-05-K7V"/>
+                        <constraint firstItem="Igu-hm-ZDU" firstAttribute="centerX" secondItem="313-4J-pN8" secondAttribute="centerX" id="6em-5r-QtI"/>
+                        <constraint firstItem="313-4J-pN8" firstAttribute="top" secondItem="Igu-hm-ZDU" secondAttribute="bottom" constant="15" id="GZO-PB-pKF"/>
+                        <constraint firstItem="oc3-Ut-ucQ" firstAttribute="top" secondItem="dzf-4y-A1a" secondAttribute="top" id="Ghh-Ne-cmo"/>
+                        <constraint firstAttribute="bottom" secondItem="C8Y-Hc-QAX" secondAttribute="bottom" id="R3h-Zv-XKP"/>
+                        <constraint firstItem="C8Y-Hc-QAX" firstAttribute="width" secondItem="dzf-4y-A1a" secondAttribute="width" multiplier="0.5" id="bFk-d6-4Kj"/>
+                        <constraint firstAttribute="bottom" secondItem="oc3-Ut-ucQ" secondAttribute="bottom" id="bbA-mD-WpW"/>
+                        <constraint firstItem="oc3-Ut-ucQ" firstAttribute="leading" secondItem="dzf-4y-A1a" secondAttribute="leading" priority="999" id="gHq-Dy-DlT"/>
+                        <constraint firstAttribute="bottom" secondItem="313-4J-pN8" secondAttribute="bottom" constant="30" id="gjh-fi-b5B"/>
+                        <constraint firstAttribute="leading" secondItem="oc3-Ut-ucQ" secondAttribute="trailing" constant="52" id="hZP-fe-C2e"/>
+                        <constraint firstAttribute="trailing" secondItem="C8Y-Hc-QAX" secondAttribute="trailing" priority="999" id="jPt-nf-P0c"/>
+                        <constraint firstItem="0jb-i8-W4m" firstAttribute="top" secondItem="dzf-4y-A1a" secondAttribute="top" constant="50" id="jkl-Zq-8s8"/>
+                        <constraint firstItem="C8Y-Hc-QAX" firstAttribute="leading" secondItem="dzf-4y-A1a" secondAttribute="trailing" constant="52" id="jvB-qr-fS5"/>
+                        <constraint firstItem="313-4J-pN8" firstAttribute="centerX" secondItem="dzf-4y-A1a" secondAttribute="centerX" id="qOK-Aa-pHQ"/>
+                        <constraint firstItem="C8Y-Hc-QAX" firstAttribute="top" secondItem="dzf-4y-A1a" secondAttribute="top" id="zTC-9t-hc9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Heo-v0-5zh" firstAttribute="centerY" secondItem="M0A-na-1Vo" secondAttribute="centerY" id="72P-cZ-ljx"/>
+                <constraint firstAttribute="trailing" secondItem="dzf-4y-A1a" secondAttribute="trailing" id="Cbc-xA-1Pf"/>
+                <constraint firstItem="M0A-na-1Vo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fcv-B9-0Kt"/>
+                <constraint firstItem="JAY-bM-8sQ" firstAttribute="centerY" secondItem="M0A-na-1Vo" secondAttribute="centerY" id="HbE-Py-JXN"/>
+                <constraint firstAttribute="trailing" secondItem="Heo-v0-5zh" secondAttribute="trailing" constant="20" id="Ndm-PR-4G0"/>
+                <constraint firstItem="xe2-D3-Fq6" firstAttribute="centerX" secondItem="Heo-v0-5zh" secondAttribute="centerX" id="XhG-d3-9co"/>
+                <constraint firstAttribute="bottom" secondItem="M0A-na-1Vo" secondAttribute="bottom" constant="32" id="bnh-Pm-EMa"/>
+                <constraint firstItem="xe2-D3-Fq6" firstAttribute="centerY" secondItem="Heo-v0-5zh" secondAttribute="centerY" id="jgu-0v-CmI"/>
+                <constraint firstItem="M0A-na-1Vo" firstAttribute="top" secondItem="dzf-4y-A1a" secondAttribute="bottom" constant="32" id="pQn-D6-4RO"/>
+                <constraint firstItem="dzf-4y-A1a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pRp-Gg-RZ3"/>
+                <constraint firstItem="dzf-4y-A1a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t1h-JH-EMp"/>
+                <constraint firstItem="JAY-bM-8sQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="zFR-rq-TyH"/>
+            </constraints>
+            <point key="canvasLocation" x="84" y="26"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_shutter_center_left" width="104" height="104"/>
+        <image name="ic_shutter_center_right" width="104" height="104"/>
+        <image name="ic_waterprint_action_oriented" width="211" height="43"/>
+        <image name="ic_waterprint_close" width="32" height="32"/>
+        <image name="ic_waterprint_revolve" width="32" height="32"/>
+        <image name="ic_waterprint_share" width="32" height="32"/>
+        <image name="ic_waterprint_shutter" width="66" height="66"/>
+    </resources>
 </document>

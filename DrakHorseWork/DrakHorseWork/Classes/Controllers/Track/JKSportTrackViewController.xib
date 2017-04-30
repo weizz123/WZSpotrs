@@ -1,12 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="DINCond-Bold.otf">
+            <string>DINCond-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JKSportTrackViewController">
             <connections>
+                <outlet property="distanceLabel" destination="CiN-Jt-bJT" id="k0m-Mg-SQQ"/>
+                <outlet property="timeLabel" destination="yLy-ER-136" id="m65-Gf-8aw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +26,102 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uc-O8-qcX">
+                    <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nMy-ak-96X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距离(公里)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPV-20-101">
+                                <rect key="frame" x="53.5" y="51" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiN-Jt-bJT">
+                                <rect key="frame" x="72.5" y="16" width="43.5" height="35"/>
+                                <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD1-Ll-PnF">
+                                <rect key="frame" x="264" y="51" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLy-ER-136">
+                                <rect key="frame" x="237.5" y="16" width="88" height="35"/>
+                                <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aPV-20-101" secondAttribute="bottom" constant="18" id="Er8-j8-viP"/>
+                            <constraint firstItem="WD1-Ll-PnF" firstAttribute="centerX" secondItem="nMy-ak-96X" secondAttribute="centerX" multiplier="1.5" id="RNM-bd-gJ1"/>
+                            <constraint firstItem="WD1-Ll-PnF" firstAttribute="centerX" secondItem="yLy-ER-136" secondAttribute="centerX" id="YkA-jG-jUU"/>
+                            <constraint firstItem="WD1-Ll-PnF" firstAttribute="top" secondItem="yLy-ER-136" secondAttribute="bottom" id="aCV-jA-7mS"/>
+                            <constraint firstItem="aPV-20-101" firstAttribute="top" secondItem="CiN-Jt-bJT" secondAttribute="bottom" id="iF5-4j-bPd"/>
+                            <constraint firstAttribute="bottom" secondItem="WD1-Ll-PnF" secondAttribute="bottom" constant="18" id="ijY-AH-d43"/>
+                            <constraint firstItem="aPV-20-101" firstAttribute="centerX" secondItem="nMy-ak-96X" secondAttribute="centerX" multiplier="0.5" id="jyS-D7-Fp5"/>
+                            <constraint firstItem="CiN-Jt-bJT" firstAttribute="centerX" secondItem="aPV-20-101" secondAttribute="centerX" id="n6e-Cq-QUc"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="fGr-hV-P9S"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJL-Ag-iLH">
+                    <rect key="frame" x="312" y="514" width="43" height="43"/>
+                    <state key="normal" image="ic_sport_gps_map_close"/>
+                    <connections>
+                        <action selector="disMissViewController:" destination="-1" eventType="touchUpInside" id="4op-wS-Te1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOh-Eg-JjU">
+                    <rect key="frame" x="20" y="514" width="43" height="43"/>
+                    <state key="normal" image="ic_sport_gps_map_mode"/>
+                    <connections>
+                        <action selector="showMapViewStyleBtn:" destination="-1" eventType="touchUpInside" id="Txh-TL-65J"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0x-Q9-k8a" customClass="JKSportCPSButton">
+                    <rect key="frame" x="20" y="33" width="139" height="31"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                    <state key="normal" title="  GPS已断开  " image="ic_sport_gps_disconnect">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isTrackBtn" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2uc-O8-qcX" secondAttribute="trailing" id="22e-Zo-QNZ"/>
+                <constraint firstItem="2uc-O8-qcX" firstAttribute="top" secondItem="yOh-Eg-JjU" secondAttribute="bottom" constant="20" id="Tlj-8a-89A"/>
+                <constraint firstAttribute="bottom" secondItem="2uc-O8-qcX" secondAttribute="bottom" id="YEE-bx-Uh2"/>
+                <constraint firstItem="h0x-Q9-k8a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="YhU-Pe-C6a"/>
+                <constraint firstItem="2uc-O8-qcX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bnb-S6-QyU"/>
+                <constraint firstItem="yOh-Eg-JjU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="dri-Sd-2k4"/>
+                <constraint firstItem="h0x-Q9-k8a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="33" id="fPR-1l-32T"/>
+                <constraint firstItem="2uc-O8-qcX" firstAttribute="top" secondItem="nJL-Ag-iLH" secondAttribute="bottom" constant="20" id="gcO-CL-s6M"/>
+                <constraint firstAttribute="trailing" secondItem="nJL-Ag-iLH" secondAttribute="trailing" constant="20" id="rJd-yg-603"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_sport_gps_disconnect" width="56" height="23"/>
+        <image name="ic_sport_gps_map_close" width="43" height="43"/>
+        <image name="ic_sport_gps_map_mode" width="43" height="43"/>
+    </resources>
 </document>

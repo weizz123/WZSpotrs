@@ -7,12 +7,16 @@
 //
 
 #import "JKSportModel.h"
+#import "JKSportSpeaker.h"
+
 
 @implementation JKSportModel
 {
     
     CLLocation *source;
     NSMutableArray <JKSportPoleLine *> *_polylines;
+    CLLocation *_preGPSLoaction;
+    JKSportSpeaker *_speaker;
 
 }
 
@@ -45,15 +49,31 @@
         _sportState = state;
         _polylines = [NSMutableArray array];
         
+        _speaker = [[JKSportSpeaker alloc] init];
+        [_speaker startSportWithSportType:_spotrType];
+        
     }
 
     return self;
     
 }
-
+- (void)setSportState:(JKSportState)sportState {
+    _sportState = sportState;
+    
+    [_speaker changeSportState:_sportState];
+    
+}
 
 - (JKSportPoleLine *)appendPolylineWithDest:(CLLocation *)dest{
     
+    [_speaker reportSportWithDistance:_totalDistance andTime:_totalTime andAvgSpeed:_avgSpeed];
+    
+    
+    //计算GPS强度, 如果GPS差/断开,则不再生成折线
+    if ([self calculateGPSStateWithLocation:dest] < HMSportGPSStateNormal) {
+        
+        return nil;
+    }
     //判断运动状态
     if (self.sportState != HMSportStateContinue) {
         //暂停/结束运动时,停止生成折线
@@ -68,11 +88,11 @@
         return nil;
     }
     
-    //排除已经"过期"的定位数据  计算当前时间和定位时间戳的差值  2秒以内的数据可用
-    if ([[NSDate date] timeIntervalSinceDate:dest.timestamp] >= 2) {
-        
-        return nil;
-    }
+//    //排除已经"过期"的定位数据  计算当前时间和定位时间戳的差值  2秒以内的数据可用
+//    if ([[NSDate date] timeIntervalSinceDate:dest.timestamp] >= 2) {
+//        
+//        return nil;
+//    }
     
     
     //判断首次调用
@@ -97,6 +117,53 @@
     
     return polyline;
 }
+
+- (JKSportGPSState)calculateGPSStateWithLocation:(CLLocation *)location{
+    
+    JKSportGPSState state = HMSportGPSStateBad;
+    
+    //判断是否在室内
+    if (location.speed < 0) {
+        
+        //发送gps更新通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"HMSportGPSStateDidChangeNote" object:nil userInfo:@{@"HMSportGPSStateDidChangeNoteGPSStateKey": @(state)}];
+        
+        return state;
+    }
+    
+    if (_preGPSLoaction == nil) {
+        
+        _preGPSLoaction = location;
+        
+        
+        return state;
+    }
+    
+    //GPS精确度时间差
+    double deltaTime = ABS([location.timestamp timeIntervalSinceDate:_preGPSLoaction.timestamp] - 1);
+    
+    // 06:55:31  06:55:30  06:55:33  06:55:34
+    
+    if (deltaTime > 1) { //GPS差
+        
+        
+    } else if (deltaTime <= 1 && deltaTime >= 0.01) { //一般
+        
+        state = HMSportGPSStateNormal;
+        
+    } else { //GPS好
+        
+        state = HMSportGPSStateGood;
+    }
+    
+    _preGPSLoaction = location;
+    
+    //发送gps更新通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"HMSportGPSStateDidChangeNote" object:nil userInfo:@{@"HMSportGPSStateDidChangeNoteGPSStateKey": @(state)}];
+    
+    return state;
+}
+
 
 - (CGFloat)totalTime {
  
@@ -127,6 +194,11 @@
     return _totalDistance;
 }
 
-
+- (NSString *)timeStr {
+    
+    
+    int time = (int) _totalTime;
+    return [NSString stringWithFormat:@"%02d:%02d:%02d", time / 3600, (time % 3600) / 60, time % 60];
+}
 
 @end

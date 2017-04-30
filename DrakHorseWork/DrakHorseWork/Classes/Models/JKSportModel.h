@@ -21,6 +21,14 @@ typedef enum : NSUInteger {
     HMSportStatePause,  //暂停
     HMSportStateFinish,  //结束
 } JKSportState;
+
+typedef enum : NSUInteger {
+    HMSportGPSStateDisconnect, // 断开
+    HMSportGPSStateBad,   //差
+    HMSportGPSStateNormal,  //一般
+    HMSportGPSStateGood,   //好
+} JKSportGPSState; //GPS状态
+
 @interface JKSportModel : NSObject
 
 // 起点大头针模型
@@ -36,6 +44,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign, readonly) CGFloat totalDistance;
 //总时长  s
 @property (nonatomic, assign, readonly) CGFloat totalTime;
+// 时间字符串
+@property (nonatomic, copy, readonly) NSString *timeStr;
 
 //最大速度  km/hour
 @property (nonatomic, assign, readonly) CGFloat maxSpeed;

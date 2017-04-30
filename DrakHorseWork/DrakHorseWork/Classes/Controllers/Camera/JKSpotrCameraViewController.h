@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JKSportModel.h"
 
 @interface JKSpotrCameraViewController : UIViewController
 
+@property (nonatomic,strong) JKSportModel *track;
 @end

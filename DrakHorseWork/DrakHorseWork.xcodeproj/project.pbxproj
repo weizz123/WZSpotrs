@@ -8,9 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		04D9347ABF008DF6538C28CA /* libPods-DrakHorseWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A39D9D73EEF9800F9C4132 /* libPods-DrakHorseWork.a */; };
+		340D51871EAE0B0E008B85CE /* DINCond-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 340D51861EAE0B0E008B85CE /* DINCond-Bold.otf */; };
+		340D518B1EAE10DF008B85CE /* JKSportPopOverViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D51891EAE10DF008B85CE /* JKSportPopOverViewViewController.m */; };
+		340D518C1EAE10DF008B85CE /* JKSportPopOverViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340D518A1EAE10DF008B85CE /* JKSportPopOverViewViewController.xib */; };
+		340D518F1EAE1C00008B85CE /* JKSportCPSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D518E1EAE1C00008B85CE /* JKSportCPSButton.m */; };
 		340FDDB51EACC127000803CC /* JKSportTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340FDDB31EACC127000803CC /* JKSportTrackViewController.m */; };
 		340FDDB61EACC127000803CC /* JKSportTrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340FDDB41EACC127000803CC /* JKSportTrackViewController.xib */; };
 		340FDDB91EACC605000803CC /* JKAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 340FDDB81EACC605000803CC /* JKAnimation.m */; };
+		3452A36B1EB21960008B7BCF /* JKSportSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3452A36A1EB21960008B7BCF /* JKSportSpeaker.m */; };
+		3452A36D1EB21AA5008B7BCF /* voice.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3452A36C1EB21AA5008B7BCF /* voice.bundle */; };
+		3452A3741EB21E67008B7BCF /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3452A3701EB21E67008B7BCF /* UIColor+CZAddition.m */; };
+		3452A3751EB21E67008B7BCF /* NSString+HMNumberConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 3452A3731EB21E67008B7BCF /* NSString+HMNumberConvert.m */; };
+		345F13691EB44037006A91AF /* JKSpotrCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345F13671EB44037006A91AF /* JKSpotrCameraViewController.m */; };
+		345F136A1EB44037006A91AF /* JKSpotrCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345F13681EB44037006A91AF /* JKSpotrCameraViewController.xib */; };
+		345F136D1EB44ACF006A91AF /* JKSportMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345F136C1EB44ACF006A91AF /* JKSportMaskView.m */; };
 		3496C9D61EAA292100F372BD /* JKSportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496C9D41EAA292100F372BD /* JKSportViewController.m */; };
 		3496C9D71EAA292100F372BD /* JKSportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3496C9D51EAA292100F372BD /* JKSportViewController.xib */; };
 		3496C9DA1EAA302500F372BD /* JKSportPoleLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496C9D91EAA302500F372BD /* JKSportPoleLine.m */; };
@@ -26,11 +37,29 @@
 
 /* Begin PBXFileReference section */
 		28A39D9D73EEF9800F9C4132 /* libPods-DrakHorseWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrakHorseWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		340D51861EAE0B0E008B85CE /* DINCond-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINCond-Bold.otf"; sourceTree = "<group>"; };
+		340D51881EAE10DF008B85CE /* JKSportPopOverViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportPopOverViewViewController.h; sourceTree = "<group>"; };
+		340D51891EAE10DF008B85CE /* JKSportPopOverViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportPopOverViewViewController.m; sourceTree = "<group>"; };
+		340D518A1EAE10DF008B85CE /* JKSportPopOverViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSportPopOverViewViewController.xib; sourceTree = "<group>"; };
+		340D518D1EAE1C00008B85CE /* JKSportCPSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportCPSButton.h; sourceTree = "<group>"; };
+		340D518E1EAE1C00008B85CE /* JKSportCPSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportCPSButton.m; sourceTree = "<group>"; };
 		340FDDB21EACC127000803CC /* JKSportTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportTrackViewController.h; sourceTree = "<group>"; };
 		340FDDB31EACC127000803CC /* JKSportTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportTrackViewController.m; sourceTree = "<group>"; };
 		340FDDB41EACC127000803CC /* JKSportTrackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSportTrackViewController.xib; sourceTree = "<group>"; };
 		340FDDB71EACC605000803CC /* JKAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKAnimation.h; sourceTree = "<group>"; };
 		340FDDB81EACC605000803CC /* JKAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKAnimation.m; sourceTree = "<group>"; };
+		3452A3691EB21960008B7BCF /* JKSportSpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportSpeaker.h; sourceTree = "<group>"; };
+		3452A36A1EB21960008B7BCF /* JKSportSpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportSpeaker.m; sourceTree = "<group>"; };
+		3452A36C1EB21AA5008B7BCF /* voice.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = voice.bundle; sourceTree = "<group>"; };
+		3452A36F1EB21E67008B7BCF /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
+		3452A3701EB21E67008B7BCF /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
+		3452A3721EB21E67008B7BCF /* NSString+HMNumberConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HMNumberConvert.h"; sourceTree = "<group>"; };
+		3452A3731EB21E67008B7BCF /* NSString+HMNumberConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HMNumberConvert.m"; sourceTree = "<group>"; };
+		345F13661EB44037006A91AF /* JKSpotrCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSpotrCameraViewController.h; sourceTree = "<group>"; };
+		345F13671EB44037006A91AF /* JKSpotrCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSpotrCameraViewController.m; sourceTree = "<group>"; };
+		345F13681EB44037006A91AF /* JKSpotrCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSpotrCameraViewController.xib; sourceTree = "<group>"; };
+		345F136B1EB44ACF006A91AF /* JKSportMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportMaskView.h; sourceTree = "<group>"; };
+		345F136C1EB44ACF006A91AF /* JKSportMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportMaskView.m; sourceTree = "<group>"; };
 		3496C9D31EAA292100F372BD /* JKSportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSportViewController.h; sourceTree = "<group>"; };
 		3496C9D41EAA292100F372BD /* JKSportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSportViewController.m; sourceTree = "<group>"; };
 		3496C9D51EAA292100F372BD /* JKSportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSportViewController.xib; sourceTree = "<group>"; };
@@ -84,6 +113,34 @@
 			path = Track;
 			sourceTree = "<group>";
 		};
+		3452A36E1EB21E67008B7BCF /* HMColor */ = {
+			isa = PBXGroup;
+			children = (
+				3452A36F1EB21E67008B7BCF /* UIColor+CZAddition.h */,
+				3452A3701EB21E67008B7BCF /* UIColor+CZAddition.m */,
+			);
+			path = HMColor;
+			sourceTree = "<group>";
+		};
+		3452A3711EB21E67008B7BCF /* NumberStringConvert */ = {
+			isa = PBXGroup;
+			children = (
+				3452A3721EB21E67008B7BCF /* NSString+HMNumberConvert.h */,
+				3452A3731EB21E67008B7BCF /* NSString+HMNumberConvert.m */,
+			);
+			path = NumberStringConvert;
+			sourceTree = "<group>";
+		};
+		345F13651EB43FFC006A91AF /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				345F13661EB44037006A91AF /* JKSpotrCameraViewController.h */,
+				345F13671EB44037006A91AF /* JKSpotrCameraViewController.m */,
+				345F13681EB44037006A91AF /* JKSpotrCameraViewController.xib */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		3496C9D21EAA290200F372BD /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +180,8 @@
 		34C148D41EAA184F00000BD6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3452A36C1EB21AA5008B7BCF /* voice.bundle */,
+				340D51861EAE0B0E008B85CE /* DINCond-Bold.otf */,
 				34C148D71EAA184F00000BD6 /* AppDelegate.h */,
 				34C148D81EAA184F00000BD6 /* AppDelegate.m */,
 				34C148DD1EAA184F00000BD6 /* Main.storyboard */,
@@ -161,6 +220,7 @@
 				3496C9D31EAA292100F372BD /* JKSportViewController.h */,
 				3496C9D41EAA292100F372BD /* JKSportViewController.m */,
 				3496C9D51EAA292100F372BD /* JKSportViewController.xib */,
+				345F13651EB43FFC006A91AF /* Camera */,
 				340FDDB11EACC10E000803CC /* Track */,
 			);
 			path = Controllers;
@@ -180,8 +240,12 @@
 		34C148EF1EAA1BC200000BD6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3452A36E1EB21E67008B7BCF /* HMColor */,
+				3452A3711EB21E67008B7BCF /* NumberStringConvert */,
 				340FDDB71EACC605000803CC /* JKAnimation.h */,
 				340FDDB81EACC605000803CC /* JKAnimation.m */,
+				3452A3691EB21960008B7BCF /* JKSportSpeaker.h */,
+				3452A36A1EB21960008B7BCF /* JKSportSpeaker.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -191,6 +255,13 @@
 			children = (
 				34C148F61EAA1CF500000BD6 /* JKMapViewController.h */,
 				34C148F71EAA1CF500000BD6 /* JKMapViewController.m */,
+				340D51881EAE10DF008B85CE /* JKSportPopOverViewViewController.h */,
+				340D51891EAE10DF008B85CE /* JKSportPopOverViewViewController.m */,
+				340D518A1EAE10DF008B85CE /* JKSportPopOverViewViewController.xib */,
+				340D518D1EAE1C00008B85CE /* JKSportCPSButton.h */,
+				340D518E1EAE1C00008B85CE /* JKSportCPSButton.m */,
+				345F136B1EB44ACF006A91AF /* JKSportMaskView.h */,
+				345F136C1EB44ACF006A91AF /* JKSportMaskView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +310,7 @@
 				TargetAttributes = {
 					34C148D01EAA184F00000BD6 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = ELQ7SL6965;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -273,8 +345,12 @@
 			files = (
 				34C148E41EAA184F00000BD6 /* LaunchScreen.storyboard in Resources */,
 				34C148E11EAA184F00000BD6 /* Assets.xcassets in Resources */,
+				345F136A1EB44037006A91AF /* JKSpotrCameraViewController.xib in Resources */,
+				3452A36D1EB21AA5008B7BCF /* voice.bundle in Resources */,
+				340D51871EAE0B0E008B85CE /* DINCond-Bold.otf in Resources */,
 				340FDDB61EACC127000803CC /* JKSportTrackViewController.xib in Resources */,
 				3496C9D71EAA292100F372BD /* JKSportViewController.xib in Resources */,
+				340D518C1EAE10DF008B85CE /* JKSportPopOverViewViewController.xib in Resources */,
 				34C148DF1EAA184F00000BD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,15 +410,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345F136D1EB44ACF006A91AF /* JKSportMaskView.m in Sources */,
+				340D518F1EAE1C00008B85CE /* JKSportCPSButton.m in Sources */,
+				345F13691EB44037006A91AF /* JKSpotrCameraViewController.m in Sources */,
 				340FDDB51EACC127000803CC /* JKSportTrackViewController.m in Sources */,
 				34C148F31EAA1C0700000BD6 /* JKHomeViewController.m in Sources */,
 				3496C9D61EAA292100F372BD /* JKSportViewController.m in Sources */,
+				340D518B1EAE10DF008B85CE /* JKSportPopOverViewViewController.m in Sources */,
 				340FDDB91EACC605000803CC /* JKAnimation.m in Sources */,
 				34C148D91EAA184F00000BD6 /* AppDelegate.m in Sources */,
 				34C148F81EAA1CF500000BD6 /* JKMapViewController.m in Sources */,
 				34C148D61EAA184F00000BD6 /* main.m in Sources */,
 				3496C9DD1EAA324200F372BD /* JKSportModel.m in Sources */,
 				3496C9DA1EAA302500F372BD /* JKSportPoleLine.m in Sources */,
+				3452A3741EB21E67008B7BCF /* UIColor+CZAddition.m in Sources */,
+				3452A36B1EB21960008B7BCF /* JKSportSpeaker.m in Sources */,
+				3452A3751EB21E67008B7BCF /* NSString+HMNumberConvert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +546,7 @@
 			baseConfigurationReference = 78E86C7CC32BFF0175B7FA21 /* Pods-DrakHorseWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ELQ7SL6965;
 				INFOPLIST_FILE = DrakHorseWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jokin.DrakHorseWork;
@@ -475,6 +559,7 @@
 			baseConfigurationReference = 3854F48AE170EB5C1D7377F0 /* Pods-DrakHorseWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ELQ7SL6965;
 				INFOPLIST_FILE = DrakHorseWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jokin.DrakHorseWork;

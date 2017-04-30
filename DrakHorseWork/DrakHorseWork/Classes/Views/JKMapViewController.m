@@ -74,7 +74,8 @@
         return;
     }
     
-    
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTimeNot" object:nil];
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"JKSportLocationDidUpdateNote" object:nil userInfo:@{@"JKSportLocationDidUpdateNoteLocationKey": userLocation.location}];
     _mapView.centerCoordinate = userLocation.location.coordinate;
     
     if (_hasSetStarAnnor == NO && self.track.startAnno) {
@@ -84,15 +85,26 @@
     
     
     JKSportPoleLine *newPolyline = [self.track appendPolylineWithDest:userLocation.location];
-    
+   
     [_mapView addOverlay:newPolyline];
     
-    
+   
     NSLog(@"总距离:%f, 总时长:%f, 最大速度:%f, 平均速度:%f", self.track.totalDistance, self.track.totalTime, self.track.maxSpeed, self.track.avgSpeed);
     
 }
+- (void)mapView:(MAMapView *)mapView didFailToLocateUserWithError:(NSError *)error{
+    
+    //GPS断开
+    //发送gps更新通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"HMSportGPSStateDidChangeNote" object:nil userInfo:@{@"HMSportGPSStateDidChangeNoteGPSStateKey": @(HMSportGPSStateDisconnect)}];
+}
 
-
+- (void)setType:(JKMapType)type {
+    _type = type;
+    _mapView.mapType = (MAMapType)_type;
+    
+    
+}
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[MAPointAnnotation class]])
@@ -130,6 +142,9 @@
     
     return nil;
 }
-    
+
+
+
+
 
 @end

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JKMapViewController.h"
 @interface JKSportPopOverViewViewController : UIViewController
+
+@property (nonatomic,assign)JKMapType mapType;
+
+- (instancetype)initWithMapStyle:(void (^)(JKMapType type))selectBlock;
+
 
 @end

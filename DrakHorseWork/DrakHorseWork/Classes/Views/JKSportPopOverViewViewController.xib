@@ -1,20 +1,69 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JKSportPopOverViewViewController">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="mapBtnArray" destination="Klo-P9-HQ0" id="4KI-dI-2cE"/>
+                <outletCollection property="mapBtnArray" destination="b84-Yf-WE3" id="1Vw-uE-KTw"/>
+                <outletCollection property="mapBtnArray" destination="B7P-m7-IoL" id="aPq-vk-78h"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b84-Yf-WE3">
+                    <rect key="frame" x="147.5" y="15" width="80" height="89"/>
+                    <state key="normal" image="ic_sport_gps_map_realmode"/>
+                    <state key="selected" image="ic_sport_gps_map_realmode_selected"/>
+                    <connections>
+                        <action selector="touchMapStyleBtn:" destination="-1" eventType="touchUpInside" id="5g6-94-zxK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klo-P9-HQ0">
+                    <rect key="frame" x="52.5" y="15" width="80" height="89"/>
+                    <state key="normal" image="ic_sport_gps_map_flatmode"/>
+                    <state key="selected" image="ic_sport_gps_map_flatmode_selected"/>
+                    <connections>
+                        <action selector="touchMapStyleBtn:" destination="-1" eventType="touchUpInside" id="WC7-Ds-ljW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7P-m7-IoL">
+                    <rect key="frame" x="242.5" y="15" width="80" height="89"/>
+                    <state key="normal" image="ic_sport_gps_map_mixmode"/>
+                    <state key="selected" image="ic_sport_gps_map_mixmode_selected"/>
+                    <connections>
+                        <action selector="touchMapStyleBtn:" destination="-1" eventType="touchUpInside" id="Brd-OG-ILi"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="B7P-m7-IoL" firstAttribute="leading" secondItem="b84-Yf-WE3" secondAttribute="trailing" constant="15" id="9j4-LL-Zq3"/>
+                <constraint firstItem="Klo-P9-HQ0" firstAttribute="centerY" secondItem="b84-Yf-WE3" secondAttribute="centerY" id="MQZ-Bn-FAv"/>
+                <constraint firstItem="B7P-m7-IoL" firstAttribute="centerY" secondItem="b84-Yf-WE3" secondAttribute="centerY" id="NOt-mA-x7J"/>
+                <constraint firstItem="b84-Yf-WE3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RDe-2R-xHw"/>
+                <constraint firstItem="b84-Yf-WE3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="WsV-d6-7xi"/>
+                <constraint firstItem="b84-Yf-WE3" firstAttribute="leading" secondItem="Klo-P9-HQ0" secondAttribute="trailing" constant="15" id="YY3-uR-rSf"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="ic_sport_gps_map_flatmode" width="80" height="89"/>
+        <image name="ic_sport_gps_map_flatmode_selected" width="80" height="89"/>
+        <image name="ic_sport_gps_map_mixmode" width="80" height="89"/>
+        <image name="ic_sport_gps_map_mixmode_selected" width="80" height="89"/>
+        <image name="ic_sport_gps_map_realmode" width="80" height="89"/>
+        <image name="ic_sport_gps_map_realmode_selected" width="80" height="89"/>
+    </resources>
 </document>

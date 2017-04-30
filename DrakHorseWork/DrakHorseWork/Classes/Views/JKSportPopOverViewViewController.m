@@ -10,28 +10,45 @@
 
 @interface JKSportPopOverViewViewController ()
 
+@property (nonatomic,copy) void (^selectBl)(JKMapType type);
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *mapBtnArray;
+
 @end
 
 @implementation JKSportPopOverViewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    UIButton *btn = self.mapBtnArray[self.mapType];
+    btn.selected = YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (instancetype)initWithMapStyle:(void (^)(JKMapType))selectBlock {
+    self = [super init];
+    if (self) {
+        self.selectBl = selectBlock;
+    }
+    return self;
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)touchMapStyleBtn:(UIButton *)sender {
+    
+    for (UIButton *btn in self.mapBtnArray) {
+        if (!sender.selected) {
+            if (self.selectBl) {
+                self.selectBl(sender.tag);
+            }
+        }
+        btn.selected = (btn == sender)? YES : NO;
+    }
+    
+    
+    
 }
-*/
+
+
+
 
 @end

@@ -25,8 +25,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>访问相机</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>访问gps</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>打开相机可好</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
